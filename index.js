@@ -1,4 +1,4 @@
-fetch('items.json');
+fetch('item.json');
 // ==================== 新增一行 ====================
 function addRow() {
     const tbody = document.getElementById('tableBody');
