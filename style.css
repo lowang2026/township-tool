@@ -1,0 +1,152 @@
+body {
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 650px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+input[type="number"],
+.search-input {
+    width: 90%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input[type="number"] {
+    text-align: center;
+}
+
+/* 可搜索下拉框 */
+.search-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.options-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 100;
+    display: none;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.options-list div {
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.options-list div:hover {
+    background-color: #f0f0f0;
+}
+
+.options-list div.no-result {
+    color: #999;
+    cursor: default;
+}
+
+/* 按钮组 */
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1;
+    transition: background 0.2s;
+}
+
+.btn-add {
+    background-color: #2196F3;
+    color: white;
+}
+
+.btn-add:hover {
+    background-color: #1976D2;
+}
+
+.btn-calc {
+    background-color: #FF9800;
+    color: white;
+}
+
+.btn-calc:hover {
+    background-color: #F57C00;
+}
+
+.btn-del {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    flex: none;
+    width: auto;
+}
+
+.btn-del:hover {
+    background-color: #d32f2f;
+}
+
+/* 结果框 */
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-left: 5px solid #4CAF50;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #2e7d32;
+}

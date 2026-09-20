@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梦想城镇商品总价计算器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>梦想城镇商品总价计算器</h2>
+
+    <table id="itemTable">
+        <thead>
+            <tr>
+                <th>商品（可输入搜索）</th>
+                <th>数量</th>
+                <th>总价 (金币)</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- 动态生成行 -->
+        </tbody>
+    </table>
+
+    <div class="btn-group">
+        <button class="btn-add" id="btnAdd">+ 新建一行商品</button>
+        <button class="btn-calc" id="btnCalc">计算以上商品总价</button>
+    </div>
+
+    <div class="result-box" id="resultBox">
+        总价：0 金币
+    </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
