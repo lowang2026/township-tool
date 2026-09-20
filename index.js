@@ -2,7 +2,7 @@
 let itemsData = [];
 
 // 2. 使用 fetch 加载 JSON 数据
-fetch('./items.json')           // 注意：文件名要和你的实际文件一致，比如是 items.json 还是 item.json
+fetch('./item.json')           // 注意：文件名要和你的实际文件一致，比如是 items.json 还是 item.json
     .then(response => {
         if (!response.ok) throw new Error('网络请求失败');
         return response.json(); // 把响应解析成 JSON
