@@ -1,4 +1,22 @@
-fetch('item.json');
+// 1. 声明 itemsData 变量，并初始化为空数组
+let itemsData = [];
+
+// 2. 使用 fetch 加载 JSON 数据
+fetch('./items.json')           // 注意：文件名要和你的实际文件一致，比如是 items.json 还是 item.json
+    .then(response => {
+        if (!response.ok) throw new Error('网络请求失败');
+        return response.json(); // 把响应解析成 JSON
+    })
+    .then(data => {
+        itemsData = data;       // 3. 把加载到的数据赋值给 itemsData
+        console.log('数据加载成功:', itemsData);
+        addRow();               // 4. 数据加载完成后，再初始化表格（添加第一行）
+    })
+    .catch(error => {
+        console.error('读取 JSON 文件失败:', error);
+        alert('加载商品数据失败，请检查文件是否存在且格式正确！');
+    });
+
 // ==================== 新增一行 ====================
 function addRow() {
     const tbody = document.getElementById('tableBody');
